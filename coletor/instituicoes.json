@@ -13,7 +13,7 @@
     "nome": "Universidade de São Paulo",
     "uf": "SP",
     "tipo": "UE",
-    "feed_url": "https://www5.usp.br/feed/",
+    "feed_url": "https://jornal.usp.br/feed/",
     "news_url": null,
     "cms": "wordpress"
   },
@@ -85,8 +85,8 @@
     "nome": "Instituto Federal da Bahia",
     "uf": "BA",
     "tipo": "IF",
-    "feed_url": null,
-    "news_url": "https://portal.ifba.edu.br/noticias",
-    "cms": "scraping"
+    "feed_url": "https://portal.ifba.edu.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
   }
 ]
