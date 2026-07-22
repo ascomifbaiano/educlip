@@ -1,0 +1,36 @@
+name: Coleta Diária de Notícias
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # Executa todo dia às 08:00 UTC (05:00 BRT)
+  workflow_dispatch:        # Permite execução manual no painel do GitHub
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar Dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r coletor/requirements.txt
+
+      - name: Executar Coletor de Notícias
+        run: |
+          python coletor/coletor_noticias.py
+
+      - name: Commit e Push das Atualizações no CSV/JSON
+        run: |
+          git config --global user.name "EduClip Bot"
+          git config --global user.email "educlip-bot@github.com"
+          git add data/noticias.csv data/metrics.json
+          git diff --cached --quiet || git commit -m "📰 Atualização diária das notícias $(date +'%d/%m/%Y')"
+          git push
