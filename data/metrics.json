@@ -1,24 +1,24 @@
 {
-  "ultima_coleta": "2026-07-22T18:38:51.999343+00:00",
-  "total_noticias": 350,
+  "ultima_coleta": "2026-07-22T18:48:15.622454+00:00",
+  "total_noticias": 321,
   "total_instituicoes": 153,
   "por_uf": {
-    "BA": 51,
+    "BA": 43,
     "PE": 19,
-    "MG": 56,
+    "MG": 51,
     "RS": 28,
-    "SP": 36,
-    "PI": 33,
-    "RJ": 21,
-    "PR": 25,
+    "SP": 32,
+    "PI": 32,
+    "RJ": 18,
+    "PR": 19,
     "MT": 1,
-    "AL": 18,
+    "AL": 17,
     "AC": 5,
     "MA": 13,
     "RR": 6,
     "PB": 12,
     "ES": 6,
-    "GO": 3,
+    "GO": 2,
     "AP": 2,
     "CE": 7,
     "PA": 1,
@@ -27,9 +27,9 @@
     "MS": 3
   },
   "por_tipo": {
-    "IF": 166,
-    "UF": 129,
-    "UE": 55
+    "IF": 156,
+    "UF": 113,
+    "UE": 52
   },
   "top_instituicoes": [
     {
@@ -38,38 +38,38 @@
     },
     {
       "sigla": "USP",
-      "total": 22
-    },
-    {
-      "sigla": "IFBA",
-      "total": 20
-    },
-    {
-      "sigla": "IFAL",
-      "total": 18
+      "total": 19
     },
     {
       "sigla": "IFPE",
       "total": 17
     },
     {
-      "sigla": "IFPI",
+      "sigla": "IFAL",
+      "total": 17
+    },
+    {
+      "sigla": "IFBA",
       "total": 15
     },
     {
-      "sigla": "UFOB",
-      "total": 13
-    },
-    {
-      "sigla": "IFF",
-      "total": 12
-    },
-    {
-      "sigla": "UNILA",
-      "total": 11
+      "sigla": "IFPI",
+      "total": 14
     },
     {
       "sigla": "IFBAIANO",
+      "total": 10
+    },
+    {
+      "sigla": "IFRS",
+      "total": 10
+    },
+    {
+      "sigla": "UESPI",
+      "total": 10
+    },
+    {
+      "sigla": "UFPB",
       "total": 10
     }
   ]
