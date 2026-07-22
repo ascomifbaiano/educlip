@@ -1,9 +1,9 @@
 {
-  "ultima_coleta": "2026-07-22T18:31:16.276358+00:00",
-  "total_noticias": 349,
+  "ultima_coleta": "2026-07-22T18:38:51.999343+00:00",
+  "total_noticias": 350,
   "total_instituicoes": 153,
   "por_uf": {
-    "BA": 50,
+    "BA": 51,
     "PE": 19,
     "MG": 56,
     "RS": 28,
@@ -27,7 +27,7 @@
     "MS": 3
   },
   "por_tipo": {
-    "IF": 165,
+    "IF": 166,
     "UF": 129,
     "UE": 55
   },
@@ -42,7 +42,7 @@
     },
     {
       "sigla": "IFBA",
-      "total": 19
+      "total": 20
     },
     {
       "sigla": "IFAL",
