@@ -1,9 +1,12 @@
-name: Coleta Diária de Notícias
+name: Coleta Diária de Notícias (EduClip Brasil)
 
 on:
   schedule:
     - cron: '0 8 * * *'   # Executa todo dia às 08:00 UTC (05:00 BRT)
   workflow_dispatch:        # Permite execução manual no painel do GitHub
+
+permissions:
+  contents: write           # Permissão necessária para o git push
 
 jobs:
   coletar:
