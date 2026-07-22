@@ -1,0 +1,92 @@
+[
+  {
+    "sigla": "IFBAIANO",
+    "nome": "Instituto Federal Baiano",
+    "uf": "BA",
+    "tipo": "IF",
+    "feed_url": "https://www.ifbaiano.edu.br/portal/feed/",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "USP",
+    "nome": "Universidade de São Paulo",
+    "uf": "SP",
+    "tipo": "UE",
+    "feed_url": "https://www5.usp.br/feed/",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IFRN",
+    "nome": "Instituto Federal do Rio Grande do Norte",
+    "uf": "RN",
+    "tipo": "IF",
+    "feed_url": "https://www.ifrn.edu.br/portal/noticias/RSS",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "IFSP",
+    "nome": "Instituto Federal de São Paulo",
+    "uf": "SP",
+    "tipo": "IF",
+    "feed_url": "https://www.ifsp.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IFPE",
+    "nome": "Instituto Federal de Pernambuco",
+    "uf": "PE",
+    "tipo": "IF",
+    "feed_url": "https://portal.ifpe.edu.br/feed/",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IFMG",
+    "nome": "Instituto Federal de Minas Gerais",
+    "uf": "MG",
+    "tipo": "IF",
+    "feed_url": "https://www.ifmg.edu.br/portal/rss.xml",
+    "news_url": null,
+    "cms": "joomla"
+  },
+  {
+    "sigla": "IFRS",
+    "nome": "Instituto Federal do Rio Grande do Sul",
+    "uf": "RS",
+    "tipo": "IF",
+    "feed_url": "https://ifrs.edu.br/feed/",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IFSC",
+    "nome": "Instituto Federal de Santa Catarina",
+    "uf": "SC",
+    "tipo": "IF",
+    "feed_url": "https://www.ifsc.edu.br/feed/",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFBA",
+    "nome": "Universidade Federal da Bahia",
+    "uf": "BA",
+    "tipo": "UF",
+    "feed_url": null,
+    "news_url": "https://www.ufba.br/noticias",
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFBA",
+    "nome": "Instituto Federal da Bahia",
+    "uf": "BA",
+    "tipo": "IF",
+    "feed_url": null,
+    "news_url": "https://portal.ifba.edu.br/noticias",
+    "cms": "scraping"
+  }
+]
