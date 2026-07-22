@@ -25,7 +25,18 @@ HEADERS_HTTP = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, Gecko) Chrome/120.0.0.0 Safari/537.36 EduClipBrasil/1.0'
 }
 
-MAX_RETENTION_DAYS = 45  # Manter no máximo 45 dias no GitHub Pages
+MAX_RETENTION_DAYS = 45
+
+# Blacklist de palavras e caminhos de URLs não jornalísticos (Setores, Contatos, Base Legal, etc.)
+URL_BLACKLIST = re.compile(
+    r'/(contato|sobre|equipe|quem-somos|localizacao|telefones|organograma|reitoria|gabinete|'
+    r'suap|sigaa|moodle|webmail|ava|calendario|'
+    r'base-legal|estudanteespecialgrad|resolucoes|atas|normativas|'
+    r'mapa-do-site|acessibilidade|privacidade|internacionalizacao|servicos)', re.I
+)
+
+# Padrões preferenciais de notícias
+URL_NEWS_PATTERN = re.compile(r'/(noticia|post|blog|view|comunicado|202\d)', re.I)
 
 def clean_text(text):
     if not text:
@@ -33,6 +44,30 @@ def clean_text(text):
     text = re.sub(r'<[^>]+>', '', text)
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
+
+def is_valid_news(url, titulo):
+    if not url or not titulo:
+        return False
+
+    # 1. Checar Blacklist de URLs
+    if URL_BLACKLIST.search(url):
+        return False
+
+    # 2. Checar títulos curtos ou puramente navegacionais
+    titulo_lower = titulo.lower()
+    if len(titulo) < 15:
+        return False
+
+    nav_terms = ['leia mais', 'saiba mais', 'veja mais', 'contato', 'home', 'transparência', 'ouvidoria', 'baixar', 'download', 'acesse aqui', 'clique aqui']
+    if any(term in titulo_lower for term in nav_terms):
+        return False
+
+    # 3. Se não tiver padrão de notícia explícito na URL, exige título mais longo/robusto
+    if not URL_NEWS_PATTERN.search(url):
+        if len(titulo) < 28:
+            return False
+
+    return True
 
 def load_existing_links():
     links = set()
@@ -58,6 +93,7 @@ def is_within_24h(pub_date_str):
 def process_ies(ies):
     items = []
     
+    # 1. Coleta via RSS
     if ies.get('feed_url'):
         try:
             resp = requests.get(ies['feed_url'], headers=HEADERS_HTTP, verify=False, timeout=6)
@@ -67,6 +103,9 @@ def process_ies(ies):
                     titulo = clean_text(entry.get('title', ''))
                     link = entry.get('link', '').strip()
                     
+                    if not is_valid_news(link, titulo):
+                        continue
+
                     pub_date = ''
                     if hasattr(entry, 'published_parsed') and entry.published_parsed:
                         pub_date = time.strftime('%Y-%m-%d', entry.published_parsed)
@@ -82,33 +121,38 @@ def process_ies(ies):
                     if 'tags' in entry and entry.tags:
                         categoria = entry.tags[0].get('term', 'Geral')
 
-                    if titulo and link:
-                        items.append({
-                            'titulo': titulo,
-                            'data_publicacao': pub_date,
-                            'link': link,
-                            'instituicao_sigla': ies['sigla'],
-                            'instituicao_nome': ies['nome'],
-                            'uf': ies['uf'],
-                            'tipo': ies['tipo'],
-                            'categoria': clean_text(categoria),
-                            'coletado_em': datetime.now(timezone.utc).isoformat()
-                        })
+                    items.append({
+                        'titulo': titulo,
+                        'data_publicacao': pub_date,
+                        'link': link,
+                        'instituicao_sigla': ies['sigla'],
+                        'instituicao_nome': ies['nome'],
+                        'uf': ies['uf'],
+                        'tipo': ies['tipo'],
+                        'categoria': clean_text(categoria),
+                        'coletado_em': datetime.now(timezone.utc).isoformat()
+                    })
         except Exception:
             pass
 
+    # 2. Fallback via Scraping HTML
     if not items and ies.get('news_url'):
         try:
             resp = requests.get(ies['news_url'], headers=HEADERS_HTTP, verify=False, timeout=6)
             if resp.status_code == 200:
                 soup = BeautifulSoup(resp.text, 'html.parser')
-                articles = soup.find_all(['article', 'div', 'li', 'h2', 'h3'], class_=re.compile(r'noticia|post|item|card|titulo|news', re.I))
+                
+                # Seletores específicos de títulos de notícias
+                selectors = ['article a', '.post-title a', '.entry-title a', '.tileHeadline a', '.item-title a', '.noticia-titulo a', 'h2 a', 'h3 a']
+                articles = []
+                for sel in selectors:
+                    articles.extend(soup.select(sel))
+                
                 if not articles:
                     articles = soup.find_all('a', href=True)
 
-                for art in articles[:10]:
-                    a_tag = art if art.name == 'a' else art.find('a', href=True)
-                    if not a_tag:
+                for a_tag in articles[:15]:
+                    if not a_tag.get('href'):
                         continue
                     titulo = clean_text(a_tag.get_text())
                     link = a_tag['href']
@@ -116,7 +160,7 @@ def process_ies(ies):
                         base_domain = '/'.join(ies['news_url'].split('/')[:3])
                         link = base_domain + link if link.startswith('/') else base_domain + '/' + link
 
-                    if titulo and len(titulo) > 20 and not re.search(r'leia mais|saiba mais|veja mais|contato|home|transparência', titulo, re.I):
+                    if is_valid_news(link, titulo):
                         items.append({
                             'titulo': titulo,
                             'data_publicacao': datetime.now(timezone.utc).strftime('%Y-%m-%d'),
@@ -146,6 +190,13 @@ def prune_old_news():
     with open(CSV_FILE, mode='r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
+            link = row.get('link', '')
+            titulo = row.get('titulo', '')
+            
+            # Aplicar filtro de saneamento também na poda
+            if not is_valid_news(link, titulo):
+                continue
+                
             pub_date_str = row.get('data_publicacao', '')
             try:
                 pub_dt = datetime.strptime(pub_date_str, '%Y-%m-%d').date()
@@ -159,11 +210,11 @@ def prune_old_news():
         writer.writeheader()
         writer.writerows(kept_rows)
 
-    print(f"Poda realizada: Mantidas {len(kept_rows)} noticias (ultimos {MAX_RETENTION_DAYS} dias).")
+    print(f"Poda e Saneamento realizados: Mantidas {len(kept_rows)} noticias saneadas.")
 
 def run_collector():
     print("=" * 60)
-    print("EduClip Brasil — Coletor Paralelo de Noticias (GitHub Actions)")
+    print("EduClip Brasil — Coletor Saneado de Noticias")
     print(f"Executado em: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}")
     print("=" * 60)
 
@@ -178,7 +229,7 @@ def run_collector():
     new_items = []
     total_coletadas = 0
 
-    print(f"Iniciando coleta paralela para {len(instituicoes)} instituicoes...")
+    print(f"Iniciando coleta paralela saneada para {len(instituicoes)} instituicoes...")
 
     with ThreadPoolExecutor(max_workers=25) as executor:
         futures = {executor.submit(process_ies, ies): ies for ies in instituicoes}
@@ -191,8 +242,8 @@ def run_collector():
                     existing_links.add(item['link'])
 
     print("Resultado da Coleta:")
-    print(f"  • Materias recentes processadas: {total_coletadas}")
-    print(f"  • Novas materias adicionadas: {len(new_items)}")
+    print(f"  • Materias validas recentes processadas: {total_coletadas}")
+    print(f"  • Novas materias saneadas adicionadas: {len(new_items)}")
 
     file_exists = os.path.exists(CSV_FILE)
     os.makedirs(os.path.dirname(CSV_FILE), exist_ok=True)
@@ -243,7 +294,7 @@ def generate_metrics(total_ies):
     with open(METRICS_FILE, 'w', encoding='utf-8') as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2)
 
-    print(f"Metricass atualizadas em: {METRICS_FILE}")
+    print(f"Metricas atualizadas em: {METRICS_FILE}")
 
 if __name__ == '__main__':
     run_collector()
