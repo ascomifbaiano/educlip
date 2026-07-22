@@ -31,9 +31,18 @@
     "nome": "Instituto Federal de São Paulo",
     "uf": "SP",
     "tipo": "IF",
-    "feed_url": "https://www.ifsp.edu.br/feed",
+    "feed_url": "https://www.ifsp.edu.br/index.php/ultimas-noticias?format=feed&type=rss",
     "news_url": null,
-    "cms": "wordpress"
+    "cms": "joomla"
+  },
+  {
+    "sigla": "IFB",
+    "nome": "Instituto Federal de Brasília",
+    "uf": "DF",
+    "tipo": "IF",
+    "feed_url": "https://www.ifb.edu.br/ultimas-noticias?format=feed&type=rss",
+    "news_url": "https://www.ifb.edu.br/ultimas-noticias",
+    "cms": "scraping"
   },
   {
     "sigla": "IFPE",
@@ -88,5 +97,1283 @@
     "feed_url": "https://portal.ifba.edu.br/rss.xml",
     "news_url": null,
     "cms": "plone"
+  },
+  {
+    "sigla": "IFAC",
+    "nome": "Instituto Federal do Acre",
+    "uf": "AC",
+    "tipo": "IF",
+    "feed_url": "https://ifac.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IFAL",
+    "nome": "Instituto Federal de Alagoas",
+    "uf": "AL",
+    "tipo": "IF",
+    "feed_url": "https://ifal.edu.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "IFAM",
+    "nome": "Instituto Federal do Amazonas",
+    "uf": "AM",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFAP",
+    "nome": "Instituto Federal do Amapá",
+    "uf": "AP",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IF Baiano",
+    "nome": "Instituto Federal Baiano",
+    "uf": "BA",
+    "tipo": "IF",
+    "feed_url": "https://ifbaiano.edu.br/?feed=rss2",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IFCE",
+    "nome": "Instituto Federal do Ceará",
+    "uf": "CE",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFES",
+    "nome": "Instituto Federal do Espírito Santo",
+    "uf": "ES",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFG",
+    "nome": "Instituto Federal de Goiás",
+    "uf": "GO",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFGOIANO",
+    "nome": "Instituto Federal Goiano",
+    "uf": "GO",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFMA",
+    "nome": "Instituto Federal do Maranhão",
+    "uf": "MA",
+    "tipo": "IF",
+    "feed_url": "https://portal.ifma.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "CEFET-MG",
+    "nome": "Centro Federal de Educação Tecnológica de Minas Gerais",
+    "uf": "MG",
+    "tipo": "IF",
+    "feed_url": "https://cefetmg.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IF Sudeste MG",
+    "nome": "Instituto Federal do Sudeste de Minas Gerais",
+    "uf": "MG",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFNMG",
+    "nome": "Instituto Federal do Norte de Minas Gerais",
+    "uf": "MG",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFSULDEMINAS",
+    "nome": "Instituto Federal do Sul de Minas Gerais",
+    "uf": "MG",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFTM",
+    "nome": "Instituto Federal do Triângulo Mineiro",
+    "uf": "MG",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFMS",
+    "nome": "Instituto Federal do Mato Grosso do Sul",
+    "uf": "MS",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFMT",
+    "nome": "Instituto Federal do Mato Grosso",
+    "uf": "MT",
+    "tipo": "IF",
+    "feed_url": "https://ifmt.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IFPA",
+    "nome": "Instituto Federal do Pará",
+    "uf": "PA",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFPB",
+    "nome": "Instituto Federal da Paraíba",
+    "uf": "PB",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFSertãoPE",
+    "nome": "Instituto Federal do Sertão Pernambucano",
+    "uf": "PE",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFPI",
+    "nome": "Instituto Federal do Piauí",
+    "uf": "PI",
+    "tipo": "IF",
+    "feed_url": "https://ifpi.edu.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "IFPR",
+    "nome": "Instituto Federal do Paraná",
+    "uf": "PR",
+    "tipo": "IF",
+    "feed_url": "https://ifpr.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "CEFET-RJ",
+    "nome": "Centro Federal de Educação Tecnológica Celso Suckow da Fonseca",
+    "uf": "RJ",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFF",
+    "nome": "Instituto Federal Fluminense",
+    "uf": "RJ",
+    "tipo": "IF",
+    "feed_url": "https://iff.edu.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "IFRJ",
+    "nome": "Instituto Federal do Rio de Janeiro",
+    "uf": "RJ",
+    "tipo": "IF",
+    "feed_url": "https://ifrj.edu.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "IFRO",
+    "nome": "Instituto Federal de Rondônia",
+    "uf": "RO",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFRR",
+    "nome": "Instituto Federal de Roraima",
+    "uf": "RR",
+    "tipo": "IF",
+    "feed_url": "https://ifrr.edu.br/rss",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "IFFarroupilha",
+    "nome": "Instituto Federal Farroupilha",
+    "uf": "RS",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFSul",
+    "nome": "Instituto Federal Sul-rio-grandense",
+    "uf": "RS",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFC",
+    "nome": "Instituto Federal Catarinense",
+    "uf": "SC",
+    "tipo": "IF",
+    "feed_url": "https://ifc.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "IFS",
+    "nome": "Instituto Federal de Sergipe",
+    "uf": "SE",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "IFTO",
+    "nome": "Instituto Federal do Tocantins",
+    "uf": "TO",
+    "tipo": "IF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNCISAL",
+    "nome": "Universidade Estadual de Ciências da Saúde de Alagoas",
+    "uf": "AL",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNEAL",
+    "nome": "Universidade Estadual de Alagoas",
+    "uf": "AL",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEA",
+    "nome": "Universidade do Estado do Amazonas",
+    "uf": "AM",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEAP",
+    "nome": "Universidade do Estado do Amapá",
+    "uf": "AP",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEFS",
+    "nome": "Universidade Estadual de Feira de Santana",
+    "uf": "BA",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UESB",
+    "nome": "Universidade Estadual do Sudoeste da Bahia",
+    "uf": "BA",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UESC",
+    "nome": "Universidade Estadual de Santa Cruz",
+    "uf": "BA",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNEB",
+    "nome": "Universidade do Estado da Bahia",
+    "uf": "BA",
+    "tipo": "UE",
+    "feed_url": "https://uneb.br/feed/",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UECE",
+    "nome": "Universidade Estadual do Ceará",
+    "uf": "CE",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "URCA",
+    "nome": "Universidade Regional do Cariri",
+    "uf": "CE",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UVA",
+    "nome": "Universidade Estadual Vale do Acaraú",
+    "uf": "CE",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEG",
+    "nome": "Universidade Estadual de Goiás",
+    "uf": "GO",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEMA",
+    "nome": "Universidade Estadual do Maranhão",
+    "uf": "MA",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEMASUL",
+    "nome": "Universidade Estadual da Região Tocantina do Maranhão",
+    "uf": "MA",
+    "tipo": "UE",
+    "feed_url": "https://uemasul.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UEMG",
+    "nome": "Universidade do Estado de Minas Gerais",
+    "uf": "MG",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNIMONTES",
+    "nome": "Universidade Estadual de Montes Claros",
+    "uf": "MG",
+    "tipo": "UE",
+    "feed_url": "https://unimontes.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UEMS",
+    "nome": "Universidade Estadual de Mato Grosso do Sul",
+    "uf": "MS",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNEMAT",
+    "nome": "Universidade do Estado de Mato Grosso",
+    "uf": "MT",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEPA",
+    "nome": "Universidade do Estado do Pará",
+    "uf": "PA",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEPB",
+    "nome": "Universidade Estadual da Paraíba",
+    "uf": "PB",
+    "tipo": "UE",
+    "feed_url": "https://uepb.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UPE",
+    "nome": "Universidade de Pernambuco",
+    "uf": "PE",
+    "tipo": "UE",
+    "feed_url": "https://upe.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UESPI",
+    "nome": "Universidade Estadual do Piauí",
+    "uf": "PI",
+    "tipo": "UE",
+    "feed_url": "https://uespi.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UEL",
+    "nome": "Universidade Estadual de Londrina",
+    "uf": "PR",
+    "tipo": "UE",
+    "feed_url": "https://uel.br/?feed=rss2",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UEM",
+    "nome": "Universidade Estadual de Maringá",
+    "uf": "PR",
+    "tipo": "UE",
+    "feed_url": "https://uem.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UEPG",
+    "nome": "Universidade Estadual de Ponta Grossa",
+    "uf": "PR",
+    "tipo": "UE",
+    "feed_url": "https://uepg.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UNESPAR",
+    "nome": "Universidade Estadual do Paraná",
+    "uf": "PR",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNICENTRO",
+    "nome": "Universidade Estadual do Centro-Oeste",
+    "uf": "PR",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNIOESTE",
+    "nome": "Universidade Estadual do Oeste do Paraná",
+    "uf": "PR",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UENF",
+    "nome": "Universidade Estadual do Norte Fluminense Darcy Ribeiro",
+    "uf": "RJ",
+    "tipo": "UE",
+    "feed_url": "https://portal.uenf.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UERJ",
+    "nome": "Universidade do Estado do Rio de Janeiro",
+    "uf": "RJ",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UEZO",
+    "nome": "Centro Universitário Estadual da Zona Oeste (UERJ)",
+    "uf": "RJ",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UERN",
+    "nome": "Universidade do Estado do Rio Grande do Norte",
+    "uf": "RN",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UERR",
+    "nome": "Universidade Estadual de Roraima",
+    "uf": "RR",
+    "tipo": "UE",
+    "feed_url": "https://uerr.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "FEEVALE",
+    "nome": "Universidade Feevale (Comunitária/Estadual)",
+    "uf": "RS",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UERGS",
+    "nome": "Universidade Estadual do Rio Grande do Sul",
+    "uf": "RS",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UDESC",
+    "nome": "Universidade do Estado de Santa Catarina",
+    "uf": "SC",
+    "tipo": "UE",
+    "feed_url": "https://udesc.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "FAMEMA",
+    "nome": "Faculdade de Medicina de Marília",
+    "uf": "SP",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "FAMERP",
+    "nome": "Faculdade de Medicina de São José do Rio Preto",
+    "uf": "SP",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNESP",
+    "nome": "Universidade Estadual Paulista",
+    "uf": "SP",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNICAMP",
+    "nome": "Universidade Estadual de Campinas",
+    "uf": "SP",
+    "tipo": "UE",
+    "feed_url": "https://unicamp.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UNITAU",
+    "nome": "Universidade de Taubaté",
+    "uf": "SP",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "USCS",
+    "nome": "Universidade Municipal de São Caetano do Sul",
+    "uf": "SP",
+    "tipo": "UE",
+    "feed_url": "https://uscs.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UNITINS",
+    "nome": "Universidade Estadual do Tocantins",
+    "uf": "TO",
+    "tipo": "UE",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFAC",
+    "nome": "Universidade Federal do Acre",
+    "uf": "AC",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFAL",
+    "nome": "Universidade Federal de Alagoas",
+    "uf": "AL",
+    "tipo": "UF",
+    "feed_url": "https://ufal.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UFAM",
+    "nome": "Universidade Federal do Amazonas",
+    "uf": "AM",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNIFAP",
+    "nome": "Universidade Federal do Amapá",
+    "uf": "AP",
+    "tipo": "UF",
+    "feed_url": "https://unifap.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFOB",
+    "nome": "Universidade Federal do Oeste da Bahia",
+    "uf": "BA",
+    "tipo": "UF",
+    "feed_url": "https://ufob.edu.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UFRB",
+    "nome": "Universidade Federal do Recôncavo da Bahia",
+    "uf": "BA",
+    "tipo": "UF",
+    "feed_url": "https://ufrb.edu.br/?feed=rss2",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFSB",
+    "nome": "Universidade Federal do Sul da Bahia",
+    "uf": "BA",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFC",
+    "nome": "Universidade Federal do Ceará",
+    "uf": "CE",
+    "tipo": "UF",
+    "feed_url": "https://portal.ufc.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFCA",
+    "nome": "Universidade Federal do Cariri",
+    "uf": "CE",
+    "tipo": "UF",
+    "feed_url": "https://ufca.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UNILAB",
+    "nome": "Universidade da Integração Internacional da Lusofonia Afro-Brasileira",
+    "uf": "CE",
+    "tipo": "UF",
+    "feed_url": "https://unilab.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UnB",
+    "nome": "Universidade de Brasília",
+    "uf": "DF",
+    "tipo": "UF",
+    "feed_url": "https://unb.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UFES",
+    "nome": "Universidade Federal do Espírito Santo",
+    "uf": "ES",
+    "tipo": "UF",
+    "feed_url": "https://ufes.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UFCAT",
+    "nome": "Universidade Federal de Catalão",
+    "uf": "GO",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFG",
+    "nome": "Universidade Federal de Goiás",
+    "uf": "GO",
+    "tipo": "UF",
+    "feed_url": "https://ufg.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFJ",
+    "nome": "Universidade Federal de Jataí",
+    "uf": "GO",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFMA",
+    "nome": "Universidade Federal do Maranhão",
+    "uf": "MA",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFJF",
+    "nome": "Universidade Federal de Juiz de Fora",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "https://ufjf.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFLA",
+    "nome": "Universidade Federal de Lavras",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFMG",
+    "nome": "Universidade Federal de Minas Gerais",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFSJ",
+    "nome": "Universidade Federal de São João del-Rei",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFTM",
+    "nome": "Universidade Federal do Triângulo Mineiro",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFU",
+    "nome": "Universidade Federal de Uberlândia",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFV",
+    "nome": "Universidade Federal de Viçosa",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "https://ufv.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFVJM",
+    "nome": "Universidade Federal dos Vales do Jequitinhonha e Mucuri",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "https://portal.ufvjm.edu.br/RSS",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UNIFAL",
+    "nome": "Universidade Federal de Alfenas",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNIFEI",
+    "nome": "Universidade Federal de Itajubá",
+    "uf": "MG",
+    "tipo": "UF",
+    "feed_url": "https://unifei.edu.br/feed/",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFGD",
+    "nome": "Universidade Federal da Grande Dourados",
+    "uf": "MS",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFMS",
+    "nome": "Universidade Federal de Mato Grosso do Sul",
+    "uf": "MS",
+    "tipo": "UF",
+    "feed_url": "https://ufms.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFMT",
+    "nome": "Universidade Federal de Mato Grosso",
+    "uf": "MT",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFR",
+    "nome": "Universidade Federal de Rondonópolis",
+    "uf": "MT",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFOPA",
+    "nome": "Universidade Federal do Oeste do Pará",
+    "uf": "PA",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFPA",
+    "nome": "Universidade Federal do Pará",
+    "uf": "PA",
+    "tipo": "UF",
+    "feed_url": "https://ufpa.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFRA",
+    "nome": "Universidade Federal Rural da Amazônia",
+    "uf": "PA",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNIFESSPA",
+    "nome": "Universidade Federal do Sul e Sudeste do Pará",
+    "uf": "PA",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFCG",
+    "nome": "Universidade Federal de Campina Grande",
+    "uf": "PB",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFPB",
+    "nome": "Universidade Federal da Paraíba",
+    "uf": "PB",
+    "tipo": "UF",
+    "feed_url": "https://ufpb.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFAPE",
+    "nome": "Universidade Federal do Agreste de Pernambuco",
+    "uf": "PE",
+    "tipo": "UF",
+    "feed_url": "https://ufape.edu.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UFPE",
+    "nome": "Universidade Federal de Pernambuco",
+    "uf": "PE",
+    "tipo": "UF",
+    "feed_url": "https://portal.ufpe.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFRPE",
+    "nome": "Universidade Federal Rural de Pernambuco",
+    "uf": "PE",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNIVASF",
+    "nome": "Universidade Federal do Vale do São Francisco",
+    "uf": "PE",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFDPar",
+    "nome": "Universidade Federal do Delta do Parnaíba",
+    "uf": "PI",
+    "tipo": "UF",
+    "feed_url": "https://ufdpar.edu.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UFPI",
+    "nome": "Universidade Federal do Piauí",
+    "uf": "PI",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFPR",
+    "nome": "Universidade Federal do Paraná",
+    "uf": "PR",
+    "tipo": "UF",
+    "feed_url": "https://ufpr.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UNILA",
+    "nome": "Universidade Federal da Integração Latino-Americana",
+    "uf": "PR",
+    "tipo": "UF",
+    "feed_url": "https://portal.unila.edu.br/RSS",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UTFPR",
+    "nome": "Universidade Tecnológica Federal do Paraná",
+    "uf": "PR",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFF",
+    "nome": "Universidade Federal Fluminense",
+    "uf": "RJ",
+    "tipo": "UF",
+    "feed_url": "https://uff.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFRJ",
+    "nome": "Universidade Federal do Rio de Janeiro",
+    "uf": "RJ",
+    "tipo": "UF",
+    "feed_url": "https://ufrj.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFRRJ",
+    "nome": "Universidade Federal Rural do Rio de Janeiro",
+    "uf": "RJ",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNIRIO",
+    "nome": "Universidade Federal do Estado do Rio de Janeiro",
+    "uf": "RJ",
+    "tipo": "UF",
+    "feed_url": "https://unirio.br/rss.xml",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UFERSA",
+    "nome": "Universidade Federal Rural do Semi-Árido",
+    "uf": "RN",
+    "tipo": "UF",
+    "feed_url": "https://ufersa.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFRN",
+    "nome": "Universidade Federal do Rio Grande do Norte",
+    "uf": "RN",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UNIR",
+    "nome": "Universidade Federal de Rondônia",
+    "uf": "RO",
+    "tipo": "UF",
+    "feed_url": "https://unir.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFRR",
+    "nome": "Universidade Federal de Roraima",
+    "uf": "RR",
+    "tipo": "UF",
+    "feed_url": "https://ufrr.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "FURG",
+    "nome": "Universidade Federal do Rio Grande",
+    "uf": "RS",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFCSPA",
+    "nome": "Universidade Federal de Ciências da Saúde de Porto Alegre",
+    "uf": "RS",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFFS",
+    "nome": "Universidade Federal da Fronteira Sul",
+    "uf": "RS",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFPel",
+    "nome": "Universidade Federal de Pelotas",
+    "uf": "RS",
+    "tipo": "UF",
+    "feed_url": "https://ufpel.edu.br/?feed=rss2",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFRGS",
+    "nome": "Universidade Federal do Rio Grande do Sul",
+    "uf": "RS",
+    "tipo": "UF",
+    "feed_url": "https://ufrgs.br/?feed=rss2",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFSM",
+    "nome": "Universidade Federal de Santa Maria",
+    "uf": "RS",
+    "tipo": "UF",
+    "feed_url": "https://ufsm.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UNIPAMPA",
+    "nome": "Universidade Federal do Pampa",
+    "uf": "RS",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFSC",
+    "nome": "Universidade Federal de Santa Catarina",
+    "uf": "SC",
+    "tipo": "UF",
+    "feed_url": "https://ufsc.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFS",
+    "nome": "Universidade Federal de Sergipe",
+    "uf": "SE",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFABC",
+    "nome": "Universidade Federal do ABC",
+    "uf": "SP",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFSCar",
+    "nome": "Universidade Federal de São Carlos",
+    "uf": "SP",
+    "tipo": "UF",
+    "feed_url": "https://ufscar.br/rss",
+    "news_url": null,
+    "cms": "plone"
+  },
+  {
+    "sigla": "UNIFESP",
+    "nome": "Universidade Federal de São Paulo",
+    "uf": "SP",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
+  },
+  {
+    "sigla": "UFNT",
+    "nome": "Universidade Federal do Norte do Tocantins",
+    "uf": "TO",
+    "tipo": "UF",
+    "feed_url": "https://ufnt.edu.br/feed",
+    "news_url": null,
+    "cms": "wordpress"
+  },
+  {
+    "sigla": "UFT",
+    "nome": "Universidade Federal do Tocantins",
+    "uf": "TO",
+    "tipo": "UF",
+    "feed_url": "N/A",
+    "news_url": null,
+    "cms": "scraping"
   }
 ]
