@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduClip Brasil — Agregador Nacional de Notícias (MEC / Gov.br)</title>
+  <meta name="description" content="Portal oficial de clipping e agregação de notícias da Rede Federal e Universidades Públicas para o Ministério da Educação (MEC).">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+
+  <!-- Google Fonts: Rawline & Raleway (Gov.br Pattern) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&family=Rawline:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- Barra de Governo (Topo Supremo Gov.br) -->
+  <div class="govbr-topbar">
+    <div class="govbr-topbar-container">
+      <a href="https://www.gov.br" target="_blank" class="govbr-brand-mini">gov.br</a>
+      <div class="accessibility-links">
+        <a href="#main-content">Ir para o conteúdo [1]</a>
+        <a href="#search-input">Ir para a busca [2]</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Principal MEC / Gov.br -->
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <span class="logo-sub">MINISTÉRIO DA EDUCAÇÃO</span>
+        <h1 class="logo-title">EduClip Brasil</h1>
+      </div>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Buscar por palavra-chave, notícia ou instituição..." aria-label="Buscar notícias educacionais">
+      </div>
+
+      <div class="stats-counter">
+        <div class="stat-item">Notícias: <span id="total-count">0</span></div>
+        <div class="stat-item">Instituições: <span id="ies-count">0</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout Principal -->
+  <div class="main-layout" id="main-content">
+    
+    <!-- Sidebar Filtros (Padrão Gov.br) -->
+    <aside class="filters-sidebar">
+      <div>
+        <h2 class="filter-group-title">Filtrar por Categoria</h2>
+        <div class="filter-options">
+          <button class="filter-btn active" data-filter="ALL">
+            Todas as Instituições
+          </button>
+          <button class="filter-btn" data-filter="IF">
+            Institutos Federais (IFs)
+          </button>
+          <button class="filter-btn" data-filter="UF">
+            Universidades Federais (UFs)
+          </button>
+          <button class="filter-btn" data-filter="UE">
+            Universidades Estaduais (UEs)
+          </button>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--govbr-border); padding-top: 1rem; font-size: 0.8rem; color: #666666;">
+        <p>🔄 Coleta automática a cada 24 horas.</p>
+        <p style="margin-top: 0.5rem;">Última atualização:<br><strong id="last-update" style="color: var(--govbr-blue-dark);">-</strong></p>
+      </div>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="content-area">
+      <div class="toolbar">
+        <h2 class="toolbar-title">Painel de Notícias Institucionais</h2>
+        <span style="font-size: 0.85rem; color: #666666;">Ordenado por data de publicação</span>
+      </div>
+
+      <!-- News Grid -->
+      <section class="news-grid" id="news-grid" aria-label="Grade de notícias institucionais">
+        <!-- Renderizado via JS -->
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Rodapé Padrão Gov.br / MEC -->
+  <footer>
+    <div class="header-container" style="justify-content: center; flex-direction: column; gap: 0.5rem;">
+      <p><strong>EduClip Brasil</strong> — Sistema de Agregação de Notícias Educacionais da Rede Pública.</p>
+      <p>Desenvolvido no padrão de acessibilidade e identidade visual <strong>Gov.br / MEC</strong>.</p>
+      <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.8;">Licença Creative Commons Atribuição-SemDerivações 3.0 Brasil.</p>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
