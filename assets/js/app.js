@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let allNews = [];
     let filteredNews = [];
     let currentFilterType = 'ALL';
-    let currentFilterIES = 'ALL';
     let searchQuery = '';
+    let currentPage = 1;
+    const ITEMS_PER_PAGE = 20;
 
     const CSV_URL = './data/noticias.csv';
 
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastUpdateEl = document.getElementById('last-update');
     const filterButtons = document.querySelectorAll('[data-filter]');
 
-    // Fetch and parse CSV
+    // Carregar CSV de Notícias
     async function loadNews() {
         try {
             const resp = await fetch(CSV_URL);
@@ -23,21 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const csvText = await resp.text();
             allNews = parseCSV(csvText);
             
-            // Sort by data_publicacao desc
+            // Ordenar por data_publicacao desc
             allNews.sort((a, b) => new Date(b.data_publicacao) - new Date(a.data_publicacao));
             
-            filteredNews = [...allNews];
-            updateStats();
-            renderNews();
+            applyFilters();
         } catch (err) {
             console.error('Erro ao carregar notícias:', err);
             newsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: #ef4444; padding: 2rem;">
-                ⚠️ Erro ao carregar dados do arquivo CSV. Verifique a conexão ou execute o coletor.
+                ⚠️ Erro ao carregar dados do arquivo CSV.
             </div>`;
         }
     }
 
-    // CSV Parser Vanilla
+    // Parser CSV Vanilla com suporte a campos com aspas
     function parseCSV(text) {
         const lines = text.trim().split('\n');
         if (lines.length <= 1) return [];
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 1; i < lines.length; i++) {
             if (!lines[i].trim()) continue;
             
-            // Regex for CSV with quoted fields
             const row = [];
             let inQuotes = false;
             let current = '';
@@ -76,10 +74,26 @@ document.addEventListener('DOMContentLoaded', () => {
         return data;
     }
 
-    // Update Header and Sidebar Stats
+    // Aplicar Filtros e Reiniciar para Página 1
+    function applyFilters() {
+        filteredNews = allNews.filter(item => {
+            const matchType = (currentFilterType === 'ALL') || (item.tipo === currentFilterType);
+            const matchSearch = !searchQuery || 
+                                (item.titulo && item.titulo.toLowerCase().includes(searchQuery)) ||
+                                (item.instituicao_sigla && item.instituicao_sigla.toLowerCase().includes(searchQuery)) ||
+                                (item.instituicao_nome && item.instituicao_nome.toLowerCase().includes(searchQuery)) ||
+                                (item.uf && item.uf.toLowerCase().includes(searchQuery));
+            return matchType && matchSearch;
+        });
+
+        currentPage = 1;
+        updateStats();
+        renderNews();
+    }
+
+    // Atualizar Estatísticas no Topo
     function updateStats() {
         totalCountEl.textContent = allNews.length;
-        
         const uniqueIES = new Set(allNews.map(n => n.instituicao_sigla));
         iesCountEl.textContent = uniqueIES.size;
 
@@ -89,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Render News Cards in Grid
+    // Renderizar Notícias Paginadas (20 Itens por Página)
     function renderNews() {
         newsGrid.innerHTML = '';
 
@@ -97,10 +111,18 @@ document.addEventListener('DOMContentLoaded', () => {
             newsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 3rem;">
                 Nenhuma notícia encontrada para os filtros selecionados.
             </div>`;
+            renderPaginationControls(0);
             return;
         }
 
-        filteredNews.forEach(item => {
+        const totalPages = Math.ceil(filteredNews.length / ITEMS_PER_PAGE);
+        if (currentPage > totalPages) currentPage = totalPages;
+
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, filteredNews.length);
+        const pageItems = filteredNews.slice(startIndex, endIndex);
+
+        pageItems.forEach(item => {
             const card = document.createElement('article');
             card.className = 'news-card';
 
@@ -111,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
                 <div>
                     <div class="card-header">
-                        <span class="ies-tag ${item.tipo}">${item.instituicao_sigla} • ${item.uf}</span>
+                        <span class="ies-tag ${item.tipo}">${escapeHTML(item.instituicao_sigla)} • ${escapeHTML(item.uf)}</span>
                         <time class="news-date" datetime="${item.data_publicacao}">${formattedDate}</time>
                     </div>
                     <a href="${item.link}" target="_blank" rel="noopener" class="news-title" style="margin-top: 0.75rem;">
@@ -127,9 +149,49 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             newsGrid.appendChild(card);
         });
+
+        renderPaginationControls(totalPages, startIndex + 1, endIndex, filteredNews.length);
     }
 
-    // Escape HTML helper
+    // Renderizar Painel de Controle da Paginação
+    function renderPaginationControls(totalPages, startItem, endItem, totalFiltered) {
+        let pagContainer = document.getElementById('pagination-container');
+        if (!pagContainer) {
+            pagContainer = document.createElement('div');
+            pagContainer.id = 'pagination-container';
+            pagContainer.className = 'pagination-container';
+            newsGrid.parentNode.appendChild(pagContainer);
+        }
+
+        if (totalPages <= 1) {
+            pagContainer.innerHTML = '';
+            return;
+        }
+
+        let html = `
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem; padding: 1rem 0; border-top: 1px solid var(--govbr-border); flex-wrap: wrap; gap: 1rem;">
+                <span style="font-size: 0.85rem; color: #666;">Exibindo ${startItem}–${endItem} de ${totalFiltered} notícias</span>
+                <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <button id="btn-prev" class="action-btn" ${currentPage === 1 ? 'disabled style="opacity:0.4;"' : ''}>◄ Anterior</button>
+                    <span style="font-size: 0.9rem; font-weight: 600; padding: 0 0.5rem;">Página ${currentPage} de ${totalPages}</span>
+                    <button id="btn-next" class="action-btn" ${currentPage === totalPages ? 'disabled style="opacity:0.4;"' : ''}>Próxima ►</button>
+                </div>
+            </div>
+        `;
+        pagContainer.innerHTML = html;
+
+        const btnPrev = document.getElementById('btn-prev');
+        const btnNext = document.getElementById('btn-next');
+
+        if (btnPrev && currentPage > 1) {
+            btnPrev.onclick = () => { currentPage--; renderNews(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+        }
+        if (btnNext && currentPage < totalPages) {
+            btnNext.onclick = () => { currentPage++; renderNews(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+        }
+    }
+
+    // Helper Escape HTML
     function escapeHTML(str) {
         if (!str) return '';
         return str.replace(/[&<>'"]/g, 
@@ -137,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // Copy Link Global Function
     window.copyLink = function(url) {
         navigator.clipboard.writeText(url).then(() => {
             alert('Link copiado para a área de transferência!');
@@ -146,39 +207,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Filter Handlers
+    // Listeners de Filtro
     filterButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', () => {
             filterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            const filterVal = btn.getAttribute('data-filter');
-            currentFilterType = filterVal;
+            currentFilterType = btn.getAttribute('data-filter');
             applyFilters();
         });
     });
 
-    // Search Input Handler
-    searchInput.addEventListener('input', (e) => {
-        searchQuery = e.target.value.toLowerCase().trim();
-        applyFilters();
-    });
-
-    // Apply Active Filters
-    function applyFilters() {
-        filteredNews = allNews.filter(item => {
-            const matchesType = currentFilterType === 'ALL' || item.tipo === currentFilterType;
-            const matchesSearch = searchQuery === '' || 
-                item.titulo.toLowerCase().includes(searchQuery) || 
-                item.instituicao_sigla.toLowerCase().includes(searchQuery) ||
-                item.instituicao_nome.toLowerCase().includes(searchQuery);
-
-            return matchesType && matchesSearch;
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            applyFilters();
         });
-
-        renderNews();
     }
 
-    // Initialize
+    // Iniciar
     loadNews();
 });
