@@ -24,7 +24,13 @@ A aplicação foi desenhada para rodar de forma inteiramente **estática e autom
 1. **Backend (Coletor)**: Script Python (`coletor/coletor_noticias.py`) que consome feeds RSS e executa scraping HTML como fallback.
 2. **Dados (Storage)**: Banco leve mantido diretamente em arquivo CSV ([`data/noticias.csv`](./data/noticias.csv)) e métricas agregadas em JSON ([`data/metrics.json`](./data/metrics.json)).
 3. **Automação (CI/CD)**: O **GitHub Actions** executa o coletor automaticamente a cada **24 horas**, realizando commit automático das novas matérias.
-4. **Frontend**: Interface construída em **HTML5 Semântico**, **CSS3 Moderno** (Dark Mode com Glassmorphism) e **JavaScript ES6+ Vanilla**, lendo o CSV diretamente via `fetch()`. Hospedado gratuitamente no **GitHub Pages**.
+4. **Frontend**: Interface construída em **HTML5 Semântico**, **CSS3 Moderno** (Padrão Digital Gov.br / MEC) e **JavaScript ES6+ Vanilla**, lendo o CSV diretamente via `fetch()`. Hospedado gratuitamente no **GitHub Pages**.
+
+---
+
+## 🏛️ Créditos e Desenvolvimento
+
+Desenvolvido por **IFBAIANO** para a Rede Federal de Ensino e Ministério da Educação (MEC).
 
 ---
 
