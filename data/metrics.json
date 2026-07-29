@@ -1,44 +1,44 @@
 {
-  "ultima_coleta": "2026-07-28T10:38:41.194195+00:00",
-  "total_noticias": 658,
+  "ultima_coleta": "2026-07-29T10:41:55.177064+00:00",
+  "total_noticias": 749,
   "total_instituicoes": 153,
   "por_uf": {
-    "BA": 110,
-    "PE": 36,
-    "MG": 58,
-    "RS": 35,
-    "SP": 122,
-    "PI": 54,
-    "RJ": 36,
-    "PR": 40,
-    "MT": 3,
+    "BA": 130,
+    "PE": 41,
+    "MG": 60,
+    "RS": 39,
+    "SP": 140,
+    "PI": 60,
+    "RJ": 42,
+    "PR": 47,
+    "MT": 4,
     "AL": 42,
-    "AC": 7,
+    "AC": 8,
     "MA": 17,
-    "RR": 14,
-    "PB": 20,
-    "ES": 13,
-    "GO": 6,
+    "RR": 18,
+    "PB": 26,
+    "ES": 15,
+    "GO": 7,
     "AP": 3,
-    "CE": 16,
-    "PA": 9,
-    "RO": 8,
-    "TO": 2,
-    "MS": 7
+    "CE": 17,
+    "PA": 11,
+    "RO": 9,
+    "TO": 3,
+    "MS": 10
   },
   "por_tipo": {
-    "IF": 265,
-    "UF": 232,
-    "UE": 161
+    "IF": 286,
+    "UF": 276,
+    "UE": 187
   },
   "top_instituicoes": [
     {
       "sigla": "USP",
-      "total": 81
+      "total": 96
     },
     {
       "sigla": "IFBA",
-      "total": 60
+      "total": 72
     },
     {
       "sigla": "IFMG",
@@ -50,27 +50,27 @@
     },
     {
       "sigla": "IFPE",
-      "total": 28
+      "total": 29
     },
     {
       "sigla": "UESPI",
-      "total": 24
+      "total": 28
     },
     {
       "sigla": "UFOB",
-      "total": 24
+      "total": 26
     },
     {
-      "sigla": "UFDPar",
-      "total": 16
-    },
-    {
-      "sigla": "UNILA",
-      "total": 16
+      "sigla": "UFPB",
+      "total": 20
     },
     {
       "sigla": "UFPR",
-      "total": 16
+      "total": 20
+    },
+    {
+      "sigla": "UFDPar",
+      "total": 18
     }
   ]
 }
