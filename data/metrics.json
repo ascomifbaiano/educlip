@@ -1,16 +1,16 @@
 {
-  "ultima_coleta": "2026-08-01T10:01:53.884130+00:00",
-  "total_noticias": 1019,
+  "ultima_coleta": "2026-08-02T10:00:21.889127+00:00",
+  "total_noticias": 1035,
   "total_instituicoes": 153,
   "por_uf": {
-    "BA": 170,
-    "PE": 56,
-    "MG": 63,
+    "BA": 173,
+    "PE": 57,
+    "MG": 62,
     "RS": 50,
-    "SP": 216,
-    "PI": 72,
-    "RJ": 55,
-    "PR": 66,
+    "SP": 217,
+    "PI": 76,
+    "RJ": 62,
+    "PR": 67,
     "MT": 6,
     "AL": 66,
     "AC": 11,
@@ -27,9 +27,9 @@
     "MS": 12
   },
   "por_tipo": {
-    "IF": 363,
-    "UF": 379,
-    "UE": 277
+    "IF": 366,
+    "UF": 386,
+    "UE": 283
   },
   "top_instituicoes": [
     {
@@ -38,7 +38,7 @@
     },
     {
       "sigla": "IFBA",
-      "total": 95
+      "total": 97
     },
     {
       "sigla": "IFAL",
@@ -46,15 +46,15 @@
     },
     {
       "sigla": "IFMG",
-      "total": 58
-    },
-    {
-      "sigla": "IFPE",
-      "total": 37
+      "total": 57
     },
     {
       "sigla": "UESPI",
-      "total": 36
+      "total": 40
+    },
+    {
+      "sigla": "IFPE",
+      "total": 38
     },
     {
       "sigla": "UFOB",
