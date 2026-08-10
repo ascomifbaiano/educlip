@@ -1,16 +1,16 @@
 {
-  "ultima_coleta": "2026-08-09T08:46:14.546996+00:00",
-  "total_noticias": 1540,
+  "ultima_coleta": "2026-08-10T09:25:36.092102+00:00",
+  "total_noticias": 1536,
   "total_instituicoes": 153,
   "por_uf": {
     "BA": 231,
     "PE": 83,
-    "MG": 73,
+    "MG": 67,
     "RS": 86,
     "SP": 346,
     "PI": 115,
     "RJ": 96,
-    "PR": 101,
+    "PR": 103,
     "MT": 8,
     "AL": 98,
     "AC": 12,
@@ -27,9 +27,9 @@
     "MS": 26
   },
   "por_tipo": {
-    "IF": 496,
+    "IF": 490,
     "UF": 609,
-    "UE": 435
+    "UE": 437
   },
   "top_instituicoes": [
     {
@@ -46,7 +46,7 @@
     },
     {
       "sigla": "IFMG",
-      "total": 65
+      "total": 59
     },
     {
       "sigla": "UFSM",
