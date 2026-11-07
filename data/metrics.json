@@ -1,43 +1,43 @@
 {
-  "ultima_coleta": "2026-11-06T15:45:59.405946+00:00",
-  "total_noticias": 3431,
+  "ultima_coleta": "2026-11-07T14:45:22.767062+00:00",
+  "total_noticias": 3393,
   "total_instituicoes": 153,
   "por_uf": {
-    "RS": 188,
-    "MG": 210,
-    "MT": 40,
+    "SP": 676,
+    "BA": 526,
+    "PI": 55,
+    "RR": 134,
     "AL": 206,
-    "BA": 524,
-    "RJ": 288,
-    "RR": 137,
-    "SP": 687,
-    "PE": 122,
-    "PI": 56,
-    "PR": 347,
-    "MA": 17,
-    "ES": 90,
     "CE": 88,
+    "RJ": 278,
+    "RS": 182,
+    "PE": 117,
+    "MT": 39,
+    "PR": 352,
+    "GO": 49,
+    "ES": 91,
+    "PA": 73,
+    "RO": 4,
+    "PB": 182,
+    "MS": 41,
+    "MG": 210,
     "AP": 23,
-    "PA": 72,
-    "RO": 6,
-    "PB": 187,
-    "TO": 52,
-    "MS": 42,
-    "GO": 49
+    "MA": 17,
+    "TO": 50
   },
   "por_tipo": {
-    "IF": 953,
-    "UF": 1363,
-    "UE": 1115
+    "UE": 1114,
+    "IF": 939,
+    "UF": 1340
   },
   "top_instituicoes": [
     {
       "sigla": "USP",
-      "total": 536
+      "total": 530
     },
     {
       "sigla": "IFBA",
-      "total": 334
+      "total": 333
     },
     {
       "sigla": "IFAL",
@@ -45,30 +45,30 @@
     },
     {
       "sigla": "UFSM",
-      "total": 142
+      "total": 138
     },
     {
       "sigla": "UNIRIO",
-      "total": 123
+      "total": 117
     },
     {
       "sigla": "IFF",
-      "total": 118
+      "total": 115
     },
     {
       "sigla": "UFOB",
-      "total": 111
-    },
-    {
-      "sigla": "UFPB",
-      "total": 98
+      "total": 114
     },
     {
       "sigla": "UFPR",
-      "total": 98
+      "total": 97
     },
     {
       "sigla": "UNILA",
+      "total": 94
+    },
+    {
+      "sigla": "UFPB",
       "total": 93
     }
   ]
